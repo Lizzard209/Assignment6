@@ -3,18 +3,14 @@ import java.util.Scanner;
 public class Firm {
 
 	public static void main(String[] args) {
-		float regularPayRate;
-		float specialPayRate;
-		float overtimePayRate;
+		
 		float hoursSpecial;
 		float hoursOvertime;
 		float hoursReg = 0;
 		float hours;
-		
-		
+
 		Person employee = new Person();
-		
-		
+
 		Scanner scan = new Scanner(System.in);
 
 		System.out.println("How many hours did you work this week?");
@@ -29,7 +25,12 @@ public class Firm {
 
 		if (hours - hoursSpecial > 30) {
 			hoursOvertime = hours - hoursSpecial - 30;
-			hoursReg = hours - hoursOvertime - hoursSpecial;}
+			hoursReg = hours - hoursOvertime - hoursSpecial;
+		}
+	}
+	
+	public void PaidAdvisor() {
+		
 	}
 
 }
