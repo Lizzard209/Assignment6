@@ -7,6 +7,8 @@ public class PaidAdvisor extends Person {
 	float hoursReg;
 	float hoursOvertime;
 	float hoursSpecial;
+	float hoursWorked;	
+	float payRate;
 
 	public PaidAdvisor(String lastName, String firstName) {
 		regularPayRate = 0;
@@ -17,15 +19,27 @@ public class PaidAdvisor extends Person {
 		hoursSpecial = 0;
 	}
 
-	public String toString() {
-		return calculatePay();
+	public String toString(String firstName, String lastName) {
+		String name = (firstName + ' ' + lastName);
+		return name + ' ' + calculatePay();
 	}
 
-	String calculatePay() {
-		regularPayRate = hoursReg * 25;
-		overtimePayRate = regularPayRate * 1.5f;
-		specialPayRate = hoursOvertime * 50;
-		return null;
+	public void calculatePay(float overtimePayRate, float regularPayRate, float specialPayRate, float hoursReg, float hoursSpecial, float hoursOvertime ) {
+		 regularPayRate = hoursReg * 25;
+		 overtimePayRate = hoursOvertime * (regularPayRate * 1.5f);
+		 specialPayRate = hoursSpecial* 50;
+	} 
+
+	public float getPayRate(float regularPayRate, float overtimePayRate, float specialPayRate) {
+		return payRate = regularPayRate +overtimePayRate +specialPayRate; 
+		
 	}
 
+	public float getHoursWorked(float hoursReg, float hoursSpecial, float hoursOvertime) {
+		return hoursWorked = hoursReg+ hoursSpecial + hoursOvertime;
+		
+	}
+	public String setNameRatehours(String name, float payRate,float hoursWorked) {
+		return name + payRate+ hoursWorked;
+	}
 }
