@@ -1,27 +1,31 @@
 
 public class PaidAdvisor extends Person {
-	
+
 	float regularPayRate;
 	float specialPayRate;
 	float overtimePayRate;
-	float hoursReg; 
+	float hoursReg;
 	float hoursOvertime;
 	float hoursSpecial;
 
-
-	public float regularPayRate(){
-		return regularPayRate = hoursReg *25;
+	public PaidAdvisor(String lastName, String firstName) {
+		regularPayRate = 0;
+		specialPayRate = 0;
+		overtimePayRate = 0;
+		hoursReg = 0;
+		hoursOvertime = 0;
+		hoursSpecial = 0;
 	}
 
-	public float specialPayRate() {
-		return specialPayRate = hoursSpecial*50;
+	public String toString() {
+		return calculatePay();
 	}
-	
-	public float overtimePayRate() {
-		return hoursOvertime = regularPayRate * 1.5f;
-		
+
+	String calculatePay() {
+		regularPayRate = hoursReg * 25;
+		overtimePayRate = regularPayRate * 1.5f;
+		specialPayRate = hoursOvertime * 50;
+		return null;
 	}
-	
-		
-	
+
 }
