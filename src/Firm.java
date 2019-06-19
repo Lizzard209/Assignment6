@@ -18,7 +18,7 @@ public class Firm {
 
 		System.out.println("How many special session hours did you work this week?");
 		hoursSpecial = scan.nextFloat();
-
+		
 		if (hours - hoursSpecial <= 30) {
 			hours = hoursReg;
 		}
@@ -27,10 +27,18 @@ public class Firm {
 			hoursOvertime = hours - hoursSpecial - 30;
 			hoursReg = hours - hoursOvertime - hoursSpecial;
 		}
-	}
+		
 	
-	public void PaidAdvisor() {
+			
+		
+			
+			
+			
+		}
+	
+
+
 		
 	}
 
-}
+
