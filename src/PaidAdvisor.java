@@ -1,5 +1,6 @@
-
+import java.util.Scanner;
 public class PaidAdvisor extends Person {
+
 
 	float regularPayRate;
 	float specialPayRate;
@@ -8,11 +9,11 @@ public class PaidAdvisor extends Person {
 	float hoursOvertime;
 	float hoursSpecial;
 	float hoursWorked;
-	float payRate;
-
-	public PaidAdvisor(String lastName, String firstName) {
-
-		super(lastName, firstName);
+	float payRate;	
+	
+	public PaidAdvisor(String firstName, String lastName) {
+	
+		//super(firstName, lastName);
 
 		regularPayRate = 0;
 		specialPayRate = 0;
@@ -28,8 +29,8 @@ public class PaidAdvisor extends Person {
 		return result;
 	}
 
-	public float calculatePay(float getPayRate, float gethoursWorked) {
-		float result = hoursWorked * getPayRate;
+	public float calculatePay(float payRate, float hoursWorked) {
+		float result = hoursWorked * payRate;
 		return result;
 
 	}
@@ -37,18 +38,22 @@ public class PaidAdvisor extends Person {
 	public float getPayRate(float regularPayRate, float overtimePayRate, float hoursReg, float hoursOvertime) {
 		regularPayRate = hoursReg * 25;
 		overtimePayRate = hoursOvertime * (regularPayRate * 1.5f);
-		float result = regularPayRate + overtimePayRate;
-		return result;
+		float payRate = regularPayRate + overtimePayRate;
+		return payRate;
 
 	}
 
 	public float getHoursWorked(float hoursReg, float hoursOvertime) {
-		return hoursWorked = hoursReg + hoursOvertime;
+		float hoursWorked = hoursReg + hoursOvertime;
+		return hoursWorked;
 
 	}
 
-	public String setNameRatehours(String name, float getPayRate, float hoursWorked) {
-		String result = name + getPayRate + hoursWorked;
-		return result;
+	public String setNameRatehours(String firstName, String lastName, float payRate, float hoursWorked) {
+		 String name = firstName+ ' ' + lastName;
+		 float result = payRate;
+		 float resulth = hoursWorked;
+		 return name + result +resulth; 
 	}
+
 }
