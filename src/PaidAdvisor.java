@@ -13,7 +13,7 @@ public class PaidAdvisor extends Person {
 	
 	public PaidAdvisor(String firstName, String lastName) {
 	
-		//super(firstName, lastName);
+		super(firstName, lastName);
 
 		regularPayRate = 0;
 		specialPayRate = 0;

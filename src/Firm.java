@@ -18,9 +18,9 @@ public class Firm {
 		System.out.println("What is your last name?");
 		String lastName = scan.next().toString();
 		
-		
-		new Person(firstName, lastName);
+		Person employee = new Person(firstName, lastName );
 
+		employee.NewAdvisor();
 		System.out.println("How many hours did you work this week?");
 		hours = scan.nextFloat();
 
@@ -36,6 +36,6 @@ public class Firm {
 			hoursReg = hours - hoursOvertime - hoursSpecial;
 		}
 
-	
+ 
 }
 }

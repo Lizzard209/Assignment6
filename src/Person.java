@@ -28,4 +28,9 @@ public class Person {
 	public String getLastName() {
 		return lastName;
 	}
+
+	public void NewAdvisor() {
+		// TODO Auto-generated method stub
+		
+	}
 }
