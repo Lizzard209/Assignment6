@@ -10,17 +10,20 @@ public class Firm {
 		float hours;
 
 		Scanner scan = new Scanner(System.in);
-			
+		
+		Person employee = new Person();
+		
 		System.out.println("What is your first name?");
-		String firstName = scan.next().toString();
+		String firstName = scan.next();
+		//add to super
 
 
 		System.out.println("What is your last name?");
-		String lastName = scan.next().toString();
-		
-		Person employee = new Person(firstName, lastName );
+		String lastName  = scan.next();
+		//add to super
 
-		employee.NewAdvisor();
+		
+		
 		System.out.println("How many hours did you work this week?");
 		hours = scan.nextFloat();
 
@@ -36,6 +39,6 @@ public class Firm {
 			hoursReg = hours - hoursOvertime - hoursSpecial;
 		}
 
- 
+ //Special hours add 
 }
 }
