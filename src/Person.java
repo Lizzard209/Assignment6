@@ -29,8 +29,6 @@ public class Person {
 		return lastName;
 	}
 
-	public void NewAdvisor() {
-		// TODO Auto-generated method stub
-		
+	
 	}
-}
+
