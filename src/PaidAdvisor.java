@@ -13,9 +13,9 @@ public class PaidAdvisor extends Person {
 	String name;
 	float money;
 
-	public PaidAdvisor() {
+	public PaidAdvisor(String firstName, String lastName) {
 
-		super();
+		super(firstName, lastName);
 
 		regularPayRate = 0;
 		specialPayRate = 0;
@@ -36,12 +36,12 @@ public class PaidAdvisor extends Person {
 	}
 
 	public float calculatePay() {
-		float hoursWorked = hoursReg + hoursOvertime+ hoursSpecial;
-		float hoursOvertime = hoursWorked - hoursSpecial-30;
-		float hoursReg = hoursSpecial- hoursOvertime;
+		float hoursWorked = hoursReg + hoursOvertime + hoursSpecial;
+		float hoursOvertime = hoursWorked - hoursSpecial - 30;
+		float hoursReg = hoursSpecial - hoursOvertime;
 		regularPayRate = hoursReg * 25;
 		overtimePayRate = hoursOvertime * (regularPayRate * 1.5f);
-		specialPayRate = hoursSpecial*50;
+		specialPayRate = hoursSpecial * 50;
 		float payRate = regularPayRate + overtimePayRate + specialPayRate;
 		float result = hoursWorked * payRate;
 		return result;
@@ -64,5 +64,4 @@ public class PaidAdvisor extends Person {
 
 	}
 
-	
 }
