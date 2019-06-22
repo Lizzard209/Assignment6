@@ -8,18 +8,20 @@ public class Firm {
 		float hoursOvertime;
 		float hoursReg = 0;
 		float hours;
+		float payRate=0;
+		float hoursWorked=0;
 
 		Scanner scan = new Scanner(System.in);
+
+		Person employee = new Person();
 		
-		 Person employee = new Person();
-		
+
 		System.out.println("What is your first name?");
 		String firstName = scan.next();
 
-
 		System.out.println("What is your last name?");
-		String lastName  = scan.next();
-		
+		String lastName = scan.next();
+
 		System.out.println("How many hours did you work this week?");
 		hours = scan.nextFloat();
 
@@ -34,8 +36,11 @@ public class Firm {
 			hoursOvertime = hours - hoursSpecial - 30;
 			hoursReg = hours - hoursOvertime - hoursSpecial;
 		}
+		employee.setNameRatehours(firstName, lastName, payRate, hoursWorked);
+		//whyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy
+	}
 
 	
- //Special hours add 
-}
+	
+
 }
