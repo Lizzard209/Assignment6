@@ -5,14 +5,11 @@ public class Firm {
 	public static void main(String[] args) {
 
 		float hoursSpecial;
-		float hoursOvertime;
+		float hoursOvertime=0;
 		float hoursReg = 0;
 		float hours;
 
 		Scanner scan = new Scanner(System.in);
-
-		PaidAdvisor employee = new PaidAdvisor("","", 0, 0 );
-		
 		
 			System.out.println("What is your first name?");
 			String firstName = scan.next();
@@ -30,20 +27,20 @@ public class Firm {
 			hoursSpecial = scan.nextFloat();
 
 			if (hours - hoursSpecial <= 30) {
-				hours = hoursReg;
+				hoursReg = hours;
 				
 			}
 
 			if (hours - hoursSpecial > 30) {
 				hoursOvertime = hours - hoursSpecial - 30;
-				hoursReg = hours - hoursOvertime - hoursSpecial;
+				hoursReg = 30;
 			}
 			
+			PaidAdvisor employee = new PaidAdvisor(firstName, lastName, hoursReg, hoursSpecial, hoursOvertime );
 			
-			employee.setNameRatehours("","", 0, 0);
-			System.out.println(firstName + ' ' + lastName);
-			System.out.println( employee);
-			System.out.println("Paid: " + employee.calculatePay());
+			employee.setNameRatehours(firstName, lastName, hours, hoursSpecial, hoursOvertime);
+		
+		
 		
 	}
 
